@@ -1,15 +1,852 @@
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--cream:#fffaf0;--gold:#f1c65c;--pale:#fff0c9;--brown:#6f3514;--brown2:#8a471d;--line:#ecd39b;--text:#4b2a18}
-body{font-family:Arial,"Noto Sans Kannada","Nirmala UI",sans-serif;background:var(--cream);color:var(--text);line-height:1.5}
-.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#fff2c9,#f9d985 55%,#ffe8ac);border-bottom:2px solid #dfb84e;min-height:230px}
-.garland{position:absolute;inset:0;background:radial-gradient(circle at 7% 0,#f6b733 0 5px,transparent 6px),radial-gradient(circle at 93% 0,#f6b733 0 5px,transparent 6px);opacity:.8}
-.hero-inner{max-width:1100px;margin:auto;min-height:230px;display:flex;align-items:center;justify-content:center;gap:18px;padding:10px 20px}
-.ganesha-wrap{width:245px;height:215px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ganesha-wrap img{width:100%;height:100%;object-fit:cover;object-position:43% 18%;mix-blend-mode:multiply}
-.hero-text{text-align:center;flex:1}.decor{font-size:24px;margin-bottom:4px}.hero h1{font-size:clamp(31px,5vw,50px);color:#4b2412;letter-spacing:.3px}.hero p{font-size:20px;color:#8b5728;margin-top:4px}.ornament{color:#b77a17;margin:7px 0;font-size:17px}.hero small{font-size:14px;color:#81501f}
-.container{max-width:1080px;margin:auto;padding:22px 18px 40px}.search-wrap{height:56px;background:#fff;border:1px solid #e4bf73;border-radius:14px;display:flex;align-items:center;padding:0 16px;box-shadow:0 2px 5px rgba(100,50,0,.03)}.search-wrap span{font-size:29px;color:#7e5b42;margin-right:10px;transform:rotate(-20deg)}.search{border:0;outline:0;width:100%;font-size:17px;background:transparent;color:var(--text)}
-.notice{margin:20px 0 14px;padding:13px 16px;background:#fff1c9;border:1px solid #e6bf64;border-radius:13px;font-size:15px;color:#5c351b}.count{font-size:13px;color:#8a684b;margin:4px 2px 9px}.list{display:grid;gap:11px}.card{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 16px;box-shadow:0 2px 8px rgba(83,45,12,.045);transition:.18s}.card:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(83,45,12,.08)}.num{width:40px;height:40px;border-radius:50%;background:#f9e5a9;display:grid;place-items:center;font-weight:700;color:#5e351a;flex-shrink:0}.info{flex:1;min-width:0}.english{font-size:18px;font-weight:800;letter-spacing:.2px;color:#4c2a18}.kannada{font-size:16px;color:#a56d2f;margin-top:2px}.open{border:0;background:var(--brown2);color:white;font-size:15px;font-weight:700;padding:10px 17px;border-radius:10px;cursor:pointer;white-space:nowrap}.open:hover{background:#71340f}
-.pagination{display:flex;justify-content:center;gap:8px;margin-top:20px;flex-wrap:wrap}.page{min-width:40px;height:38px;border:1px solid #e5c789;background:white;border-radius:8px;color:#633717;font-weight:700;cursor:pointer}.page.active,.page:hover{background:var(--brown2);color:#fff}.dots{padding:9px 3px;color:#805a38}.empty{text-align:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;color:#8b694b}
-footer{margin-top:10px;text-align:center;background:linear-gradient(#fff0c7,#ffe6a4);border-top:1px solid #e3c173;color:#70411f;padding:19px 14px 0}.footer-devotion{font-size:17px;margin-bottom:5px}.copyright{margin:16px -14px 0;background:#5d260b;color:#fff;padding:12px;font-size:13px}
-@media(max-width:700px){.hero{min-height:205px}.hero-inner{min-height:205px;padding:8px 12px;gap:5px}.ganesha-wrap{width:145px;height:175px}.hero h1{font-size:27px}.hero p{font-size:15px}.decor{font-size:19px}.hero small{font-size:12px}.container{padding:16px 11px 30px}.search-wrap{height:52px}.card{padding:11px 10px;gap:10px}.num{width:34px;height:34px}.english{font-size:14px}.kannada{font-size:13px}.open{padding:8px 11px;font-size:12px}.notice{font-size:13px}}
-@media(max-width:430px){.ganesha-wrap{width:105px;height:150px}.hero h1{font-size:22px}.hero p{font-size:13px}.ornament{font-size:12px}.hero-inner{align-items:flex-end}.english{font-size:13px}.kannada{font-size:12px}.open{padding:7px 9px;font-size:11px}}
+/* =========================================
+   SREEDEVI BHAJANA MANDALA
+   COMPLETE CSS
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #fffaf0;
+  --gold: #f1c65c;
+  --pale: #fff0c9;
+  --brown: #6f3514;
+  --brown2: #8a471d;
+  --line: #ecd39b;
+  --text: #4b2a18;
+}
+
+body {
+  font-family: Arial, "Noto Sans Kannada", "Nirmala UI", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   DEITY TOP SECTION
+========================================= */
+
+.deity-hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(255,255,255,.55),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 92% 80%,
+      rgba(255,255,255,.45),
+      transparent 24%
+    ),
+    linear-gradient(
+      115deg,
+      #fff2c9,
+      #f9d985 55%,
+      #ffe8ac
+    );
+
+  border-bottom: 2px solid #dfb84e;
+
+  padding: 18px 18px 20px;
+
+  text-align: center;
+}
+
+
+/* Decorative symbols */
+
+.deity-decoration {
+  color: #b77a17;
+  font-size: 21px;
+  letter-spacing: 8px;
+  margin: 4px 0 14px;
+}
+
+
+/* =========================================
+   DEITY IMAGE CONTAINER
+========================================= */
+
+.deity-gallery {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   LAKSHMI / SARASWATHI / GANESHA / VASAVAMBA
+========================================= */
+
+.lakshmi,
+.saraswathi,
+.ganesha,
+.vasavamba {
+  background: rgba(255, 255, 255, 0.78);
+
+  border: 1px solid #e4c477;
+
+  border-radius: 18px;
+
+  padding: 10px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 12px rgba(83, 45, 12, 0.10);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.lakshmi:hover,
+.saraswathi:hover,
+.ganesha:hover,
+.vasavamba:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 9px 20px rgba(83, 45, 12, 0.16);
+}
+
+
+/* =========================================
+   DEITY IMAGES
+========================================= */
+
+.lakshmi img,
+.saraswathi img,
+.ganesha img,
+.vasavamba img {
+  width: 100%;
+
+  height: 210px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 13px;
+
+  background: #fff8e8;
+}
+
+
+/* =========================================
+   DEITY NAMES
+========================================= */
+
+.lakshmi h3,
+.saraswathi h3,
+.ganesha h3,
+.vasavamba h3 {
+  margin-top: 9px;
+
+  color: #6f3514;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   SREEDEVI BHAJANA MANDALA HEADING
+========================================= */
+
+.bhajana-heading {
+  text-align: center;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #fffaf0,
+      #fffdf7
+    );
+
+  padding: 25px 15px 14px;
+}
+
+
+/* Decorative symbol */
+
+.bhajana-heading .decor {
+  color: #b77a17;
+
+  font-size: 23px;
+
+  margin-bottom: 5px;
+}
+
+
+/* Main title */
+
+.bhajana-heading h1 {
+  color: #4b2412;
+
+  font-size: clamp(28px, 5vw, 46px);
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  line-height: 1.2;
+}
+
+
+/* Subtitle */
+
+.bhajana-heading p {
+  font-size: 18px;
+
+  color: #8b5728;
+
+  margin-top: 6px;
+}
+
+
+/* Ornament */
+
+.bhajana-heading .ornament {
+  color: #b77a17;
+
+  font-size: 17px;
+
+  margin: 8px 0 2px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+  max-width: 1080px;
+
+  margin: auto;
+
+  padding: 22px 18px 40px;
+}
+
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.search-wrap {
+  height: 56px;
+
+  background: #fff;
+
+  border: 1px solid #e4bf73;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 16px;
+
+  box-shadow:
+    0 2px 5px rgba(100, 50, 0, 0.03);
+}
+
+
+.search-wrap span {
+  font-size: 29px;
+
+  color: #7e5b42;
+
+  margin-right: 10px;
+
+  transform: rotate(-20deg);
+}
+
+
+.search {
+  border: 0;
+
+  outline: 0;
+
+  width: 100%;
+
+  font-size: 17px;
+
+  background: transparent;
+
+  color: var(--text);
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.notice {
+  margin: 20px 0 14px;
+
+  padding: 13px 16px;
+
+  background: #fff1c9;
+
+  border: 1px solid #e6bf64;
+
+  border-radius: 13px;
+
+  font-size: 15px;
+
+  color: #5c351b;
+}
+
+
+/* =========================================
+   COUNT
+========================================= */
+
+.count {
+  font-size: 13px;
+
+  color: #8a684b;
+
+  margin: 4px 2px 9px;
+}
+
+
+/* =========================================
+   BHAJANA LIST
+========================================= */
+
+.list {
+  display: grid;
+
+  gap: 11px;
+}
+
+
+/* =========================================
+   BHAJANA CARD
+========================================= */
+
+.card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  padding: 13px 16px;
+
+  box-shadow:
+    0 2px 8px rgba(83, 45, 12, 0.045);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(83, 45, 12, 0.08);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.num {
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: #f9e5a9;
+
+  display: grid;
+
+  place-items: center;
+
+  font-weight: 700;
+
+  color: #5e351a;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   BHAJANA INFORMATION
+========================================= */
+
+.info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* English */
+
+.english {
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+
+  color: #4c2a18;
+}
+
+
+/* Kannada */
+
+.kannada {
+  font-size: 16px;
+
+  color: #a56d2f;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================
+   OPEN BUTTON
+========================================= */
+
+.open {
+  border: 0;
+
+  background: var(--brown2);
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  padding: 10px 17px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.open:hover {
+  background: #71340f;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+.page {
+  min-width: 40px;
+
+  height: 38px;
+
+  border: 1px solid #e5c789;
+
+  background: white;
+
+  border-radius: 8px;
+
+  color: #633717;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.page.active,
+.page:hover {
+  background: var(--brown2);
+
+  color: #fff;
+}
+
+
+.dots {
+  padding: 9px 3px;
+
+  color: #805a38;
+}
+
+
+/* =========================================
+   EMPTY MESSAGE
+========================================= */
+
+.empty {
+  text-align: center;
+
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 14px;
+
+  padding: 30px;
+
+  color: #8b694b;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  margin-top: 10px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      #fff0c7,
+      #ffe6a4
+    );
+
+  border-top: 1px solid #e3c173;
+
+  color: #70411f;
+
+  padding: 19px 14px 0;
+}
+
+
+.footer-devotion {
+  font-size: 17px;
+
+  margin-bottom: 5px;
+}
+
+
+.copyright {
+  margin: 16px -14px 0;
+
+  background: #5d260b;
+
+  color: #fff;
+
+  padding: 12px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  /* Two deity images per row */
+
+  .deity-gallery {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .deity-hero {
+    padding: 14px 12px 17px;
+  }
+
+
+  .deity-decoration {
+    font-size: 17px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* Deity cards */
+
+  .lakshmi,
+  .saraswathi,
+  .ganesha,
+  .vasavamba {
+    padding: 7px;
+
+    border-radius: 14px;
+  }
+
+
+  /* Deity images */
+
+  .lakshmi img,
+  .saraswathi img,
+  .ganesha img,
+  .vasavamba img {
+    height: 155px;
+
+    border-radius: 10px;
+  }
+
+
+  /* Names */
+
+  .lakshmi h3,
+  .saraswathi h3,
+  .ganesha h3,
+  .vasavamba h3 {
+    font-size: 14px;
+
+    margin-top: 7px;
+  }
+
+
+  /* Bhajana heading */
+
+  .bhajana-heading {
+    padding-top: 20px;
+  }
+
+
+  .bhajana-heading h1 {
+    font-size: 25px;
+  }
+
+
+  .bhajana-heading p {
+    font-size: 14px;
+  }
+
+
+  /* Main content */
+
+  .container {
+    padding: 16px 11px 30px;
+  }
+
+
+  /* Search */
+
+  .search-wrap {
+    height: 52px;
+  }
+
+
+  /* Cards */
+
+  .card {
+    padding: 11px 10px;
+
+    gap: 10px;
+  }
+
+
+  .num {
+    width: 34px;
+
+    height: 34px;
+  }
+
+
+  .english {
+    font-size: 14px;
+  }
+
+
+  .kannada {
+    font-size: 13px;
+  }
+
+
+  .open {
+    padding: 8px 11px;
+
+    font-size: 12px;
+  }
+
+
+  .notice {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .deity-gallery {
+    gap: 9px;
+  }
+
+
+  .deity-card {
+    padding: 6px;
+  }
+
+
+  .lakshmi img,
+  .saraswathi img,
+  .ganesha img,
+  .vasavamba img {
+    height: 130px;
+  }
+
+
+  .lakshmi h3,
+  .saraswathi h3,
+  .ganesha h3,
+  .vasavamba h3 {
+    font-size: 12px;
+  }
+
+
+  .deity-decoration {
+    font-size: 15px;
+
+    letter-spacing: 3px;
+  }
+
+
+  .bhajana-heading h1 {
+    font-size: 21px;
+  }
+
+
+  .bhajana-heading p {
+    font-size: 13px;
+  }
+
+
+  .bhajana-heading .decor {
+    font-size: 18px;
+  }
+
+
+  .bhajana-heading .ornament {
+    font-size: 13px;
+  }
+
+
+  .english {
+    font-size: 13px;
+  }
+
+
+  .kannada {
+    font-size: 12px;
+  }
+
+
+  .open {
+    padding: 7px 9px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 350px) {
+
+  .deity-gallery {
+    gap: 7px;
+  }
+
+
+  .lakshmi img,
+  .saraswathi img,
+  .ganesha img,
+  .vasavamba img {
+    height: 110px;
+  }
+
+
+  .lakshmi h3,
+  .saraswathi h3,
+  .ganesha h3,
+  .vasavamba h3 {
+    font-size: 11px;
+  }
+
+
+  .card {
+    gap: 7px;
+  }
+
+
+  .num {
+    width: 30px;
+
+    height: 30px;
+
+    font-size: 12px;
+  }
+
+
+  .open {
+    padding: 6px 7px;
+
+    font-size: 10px;
+  }
+}
