@@ -3,7 +3,7 @@
 body{font-family:Arial,"Noto Sans Kannada","Nirmala UI",sans-serif;background:var(--cream);color:var(--text);line-height:1.5}
 .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#fff2c9,#f9d985 55%,#ffe8ac);border-bottom:2px solid #dfb84e;min-height:230px}
 .garland{position:absolute;inset:0;background:radial-gradient(circle at 7% 0,#f6b733 0 5px,transparent 6px),radial-gradient(circle at 93% 0,#f6b733 0 5px,transparent 6px);opacity:.8}
-.hero-inner{max-width:1100px;margin:auto;min-height:230px;display:flex;align-items:center;justify-content:center;gap:18px;padding:10px 20px;margin-bottom:4px}
+.hero-inner{max-width:1100px;margin:auto;min-height:230px;display:flex;align-items:center;justify-content:center;gap:18px;padding:10px 20px;margin-bottom:4px;display-direction:column}
 .ganesha-wrap{width:245px;height:215px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ganesha-wrap img{width:100%;height:100%;object-fit:cover;object-position:43% 18%;mix-blend-mode:multiply}
 .lakshmi{width:245px;height:215px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
